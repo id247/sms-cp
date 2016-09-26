@@ -7,15 +7,16 @@
 //     font-style: normal;
 // }
 
+$open: 'Open Sans';
 
-$mainFontFamily: Helvetica, sans-serif;
+$mainFontFamily: $open, Helvetica, sans-serif;
 
 //
 //colors
 //
 
-
-$text: #1c1c1c;
+$blue: #00bae5;
+$text: #000;
 
 //
 //medias

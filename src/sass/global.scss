@@ -3,13 +3,14 @@
  * ========================================================================== */
 
 html{
-	min-width: 1020px;
+	min-width: 1000px;
 	-webkit-font-smoothing: antialiased;
 	text-size-adjust: none;
 	font-size: 16px;
 	line-height: 1.2;
 	font-family: $mainFontFamily;
 	color: $text;
+	font-weight: 300;
 }
 
 body{
@@ -47,7 +48,7 @@ sup{
 
 .text{
 	font-size: 18px;
-	line-height: (26/18);
+	line-height: (31/18);
 
 	h3{
 		font-size: 24px;

@@ -17,7 +17,7 @@
  * ========================================================================== */
 
 .section{
-	padding: 80px 0 80px;
+	padding: 90px 0 90px;
 
 	&__wrap{
 		@include clearfix;
@@ -29,14 +29,104 @@
 	&__title{
 		text-align: center;
 		margin: 0 0 40px;
-		font-weight: 700;
-		font-size: 36px;
-		line-height: (50/36);
+		font-weight: 300;
+		font-size: 60px;
+		line-height: (58/44);
 	}
 
 	&__text{
-		margin: 0 0 30px;		
+		text-align: center;
+		margin: 0 auto 30px;	
+		max-width: 750px;	
+	}
+
+	&__button-placeholder{
+		text-align: center;
 	}
 }
 
+
+/* ==========================================================================
+ * logo
+ * ========================================================================== */
+
+.logo{
+	text-indent: -9999px;
+	display: inline-block;
+	@include sprite($logotype);
+}
+
+/* ==========================================================================
+ * header
+ * ========================================================================== */
+
+.header{
+	padding: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 500;
+	color: #fff;
+}
+
+/* ==========================================================================
+ * menu
+ * ========================================================================== */
+
+.menu{
+
+	&__list{
+		margin: 0 0 -20px;
+	}
+
+	&__item{
+		display: inline-block;
+		vertical-align: bottom;
+		margin: 0 40px 20px 0;
+
+		&:first-child{
+			padding-bottom: 3px;
+		}
+	}
+
+	&__href{
+		font-size: 14px;
+		font-weight: 300;
+		border-color: rgba(255,255,255,.5);
+		&.active{
+			border-color: transparent;
+		}
+	}
+}
+
+/* ==========================================================================
+ * home
+ * ========================================================================== */
+
+.home{
+	background: #746c64 url(../images/bg/home.jpg) 50% 50% no-repeat;
+	background-size: cover;
+	color: #fff;
+	padding: 215px 0 0;
+
+	&__content{
+		position: relative;
+		min-height: 400px;
+		&:before{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			right: 87%;
+			@include sprite($phone);		
+		}
+
+		margin: 0 0 0 375px;
+	}
+
+	&__title{
+		text-align: left;
+		font-size: 48px;
+	}
+}
  

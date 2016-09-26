@@ -1,1 +1,289 @@
-<h1>HOME</h1>
+<header class="container__section section header" id="header">
+	
+	<div class="section__wrap header__wrap">
+		
+		<div class="header__menu menu">
+			
+			<ul class="menu__list">
+				
+				<li class="menu__item">
+					@@if (server !== 'mosreg'){
+					<a href="https://dnevnik.ru/" class="menu__href logo">Дневник.ру</a>
+					}
+					@@if (server === 'mosreg'){
+					<a href="https://school.mosreg.ru" class="menu__href logo logo--mosreg">Школьный портал</a>
+					}
+				</li>
+				
+				<li class="menu__item">
+					<a href="#home" class="menu__href link">СМС и  Email подписки</a>
+				</li>
+				
+				<li class="menu__item">
+					<a href="#how" class="menu__href link">Как это работает</a>
+				</li>
+				
+				<li class="menu__item">
+					<a href="#screen" class="menu__href link">Преимущества</a>
+				</li>
+			
+				
+				<li class="menu__item">
+					<a href="#faq" class="menu__href link">Вопросы и ответы</a>
+				</li>
+			
+			</ul> <!-- /.menu__list -->
+			
+		</div><!-- /.header__menu -->
+	
+	</div> <!-- /.header -->
+
+</header> <!-- /.header -->
+
+
+
+
+<section class="container__section section home" id="home">
+	
+	<div class="section__wrap home__wrap">
+
+		<div class="home__content">
+
+			<h1 class="section__title home__title">
+				SMS и Email подписки 
+				—&nbsp;мгновенно узнавайте,
+				как дела в&nbsp;школе
+			</h1>
+
+			<div class="home__button-placeholder">
+						
+				<a 
+				
+				@@if (server === "dnevnik" || server === "local"){
+				href="https://dnevnik.ru/subscriptions?utm_source=dnevnik&utm_medium=landing1&utm_campaign=free1" 
+				}
+				
+				@@if (server === "mosreg"){
+				href="https://school.mosreg.ru/subscriptions?utm_source=mosreg&utm_medium=landing1&utm_campaign=free1" 
+				}
+
+				class="home__button button button--blue button--m">Попробовать бесплатно</a>
+			
+			</div><!-- /.home__button-placeholder -->
+
+		</div><!-- /.home__content -->
+	
+	</div> <!-- /.home__wrap -->
+
+</section> <!-- /.home -->
+
+
+
+
+<section class="container__section section how" id="how">
+	
+	<div class="section__wrap how__wrap">
+
+		<h2 class="section__title how__title">
+			Как это работает?
+		</h2>
+
+		<div class="section__text how__text text">
+			<p>
+				Каждый день мы собираем и отправляем Вам актуальную информацию о том, что произошло сегодня в школе. Подключив услугу, Вы будете всегда в курсе:
+			</p>
+		</div><!-- /.section__text how__text -->
+
+		<ul class="how__list">
+			
+			<li class="how__item how__item--1">
+				
+				Какие оценки
+				получил ребенок
+				
+			</li> <!-- /.how__item -->
+			
+			<li class="how__item how__item--2">
+				
+				Какие уроки
+				пропустил
+				
+			</li> <!-- /.how__item -->
+			
+			<li class="how__item how__item--3">
+				
+				Что задано
+				на&nbsp;дом
+				
+			</li> <!-- /.how__item -->
+			
+			<li class="how__item how__item--4">
+				
+				Какое расписание
+				завтра
+				
+			</li> <!-- /.how__item -->
+			
+			<li class="how__item how__item--5">
+				
+				Что нового
+				в&nbsp;школе
+				
+			</li> <!-- /.how__item -->
+		
+		</ul> <!-- /.how__list -->
+	
+	</div> <!-- /.how__wrap -->
+
+</section> <!-- /.how -->
+
+
+
+<section class="container__section section screen" id="screen">
+	
+	<div class="section__wrap screen__wrap">
+
+		<div class="screen__content">
+			
+			<div class="screen__text screen__text--1 text">
+				<p>
+					Посмотрите пример
+					уведомления, которое Вы
+					будете получать
+				</p>
+			</div><!-- /.screen__text -->
+
+			<div class="screen__text screen__text--2 text">
+				<p>
+					Выбирайте типы
+					уведомлений,
+					которые будете получать
+				</p>
+			</div><!-- /.screen__text -->
+
+			<div class="screen__text screen__text--3 text">
+				<p>
+					Выбирайте, на какой срок Вы хотите подключить подписку
+				</p>
+			</div><!-- /.screen__text -->
+
+		</div><!-- /.screen__content -->
+	
+	</div> <!-- /.screen__wrap -->
+
+</section> <!-- /.screen -->
+
+
+
+<section class="container__section section subscribe" id="subscribe">
+	
+	<div class="section__wrap subscribe__wrap">
+
+		<h2 class="section__title subscribe__title">
+			Подписка по минимальной цене
+		</h2>
+
+		<div class="section__text subscribe__text text">
+			<p>
+				По окончании бесплатного пробного периода Вы можете подключить SMS подписку от 49 рублей в месяц, Email подписку — от 9 рублей в месяц. 
+			</p>
+		</div><!-- /.section__text subscribe__text -->
+
+		<div class="section__button-placeholder subscribe__button-placeholder">
+					
+			<a 
+				
+			@@if (server === "dnevnik" || server === "local"){
+			href="https://dnevnik.ru/subscriptions?utm_source=dnevnik&utm_medium=landing2&utm_campaign=free2" 
+			}
+			
+			@@if (server === "mosreg"){
+			href="https://school.mosreg.ru/subscriptions?utm_source=mosreg&utm_medium=landing2&utm_campaign=free2" 
+			}
+
+			class="subscribe__button button button--blue button--m">Попробовать бесплатно</a>
+		
+		</div><!-- /.home__button-placeholder -->
+	
+	</div> <!-- /.subscribe__wrap -->
+
+</section> <!-- /.subscribe -->
+
+
+
+<section class="container__section section faq" id="faq">
+	
+	<div class="section__wrap faq__wrap">
+
+		<h2 class="section__title faq__title">
+			Вопросы и ответы
+		</h2>
+
+		<ul class="faq__list">
+			
+			<li class="faq__item faq-item">
+				
+				<h3 class="faq-item__title">
+					Как я могу оплатить подписку?
+				</h3><!-- /.faq-item__title -->
+
+				<div class="faq-item__text text">
+					<p>
+						Оплатить подписку можно двумя способами:<br>
+						— с помощью баллов Дневник.ру <br>
+						(1 балл = 1 рубль);<br>
+						— банковской картой или электронным кошельком, если на Вашем счёте нет баллов.
+					</p>
+				</div><!-- /.faq-item__text text -->
+				
+			</li> <!-- /.faq__item -->
+			
+			<li class="faq__item faq-item">
+				
+				<h3 class="faq-item__title">
+					Как часто я буду получать сообщения?
+				</h3><!-- /.faq-item__title -->
+
+				<div class="faq-item__text text">
+					<p>
+						Раз в день Вы будете получать по одному сообщению для каждой подключенной опции. В случае, если за день новой информации не появилось, сообщение отправлено не будет. 
+					</p>
+				</div><!-- /.faq-item__text text -->
+				
+			</li> <!-- /.faq__item -->
+			
+			<li class="faq__item faq-item">
+				
+				<h3 class="faq-item__title">
+					Могу ли я отключить подписку?
+				</h3><!-- /.faq-item__title -->
+
+				<div class="faq-item__text text">
+					<p>
+						Вы можете в любое время отказаться от подписки, обратившись в службу поддержки: team@company.dnevnik.ru При этом все неиспользованные баллы будут возвращены на Ваш счёт.
+					</p>
+				</div><!-- /.faq-item__text text -->
+				
+			</li> <!-- /.faq__item -->
+		
+		</ul> <!-- /.faq__list -->
+
+		<div class="section__button-placeholder faq__button-placeholder">
+					
+			<a 
+
+			@@if (server === "dnevnik" || server === "local"){
+			href="https://help.dnevnik.ru/hc/ru?utm_source=dnevnik&utm_medium=landing_subscriptions&utm_campaign=landing_subscriptions" 
+			}
+			
+			@@if (server === "mosreg"){
+			href="https://helpschool.mosreg.ru/hc/ru?utm_source=mosreg&utm_medium=landing_subscriptions&utm_campaign=landing_subscriptions" 
+			}
+
+			class="faq__button button button--grey button--m">Обратиться в поддержку</a>
+		
+		</div><!-- /.home__button-placeholder -->
+	
+	</div> <!-- /.faq__wrap -->
+
+</section> <!-- /.faq -->
