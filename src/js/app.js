@@ -48,7 +48,7 @@ export default (function (window, document, $){
 
 		function fix(){
 			const scrollTop = $(window).scrollTop();
-			const showPosition = 200;
+			const showPosition = 500;
 
 			if ( scrollTop > 0 && scrollTop <= showPosition ){
 				$header.addClass('header--hidden');

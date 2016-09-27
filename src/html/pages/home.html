@@ -8,7 +8,7 @@
 				
 				<li class="menu__item">
 					@@if (server !== 'mosreg'){
-					<a href="https://dnevnik.ru/" class="menu__href logo">Дневник.ру</a>
+					<a href="https://dnevnik.ru/" class="menu__href logo logo--dnevnik">Дневник.ру</a>
 					}
 					@@if (server === 'mosreg'){
 					<a href="https://school.mosreg.ru" class="menu__href logo logo--mosreg">Школьный портал</a>
@@ -16,20 +16,20 @@
 				</li>
 				
 				<li class="menu__item">
-					<a href="#home" class="menu__href link">СМС и  Email подписки</a>
+					<a href="#home" class="menu__href link js-goto">SMS и  Email подписки</a>
 				</li>
 				
 				<li class="menu__item">
-					<a href="#how" class="menu__href link">Как это работает</a>
+					<a href="#how" class="menu__href link js-goto">Как это работает</a>
 				</li>
 				
 				<li class="menu__item">
-					<a href="#screen" class="menu__href link">Преимущества</a>
+					<a href="#screen" class="menu__href link js-goto">Преимущества</a>
 				</li>
 			
 				
 				<li class="menu__item">
-					<a href="#faq" class="menu__href link">Вопросы и ответы</a>
+					<a href="#faq" class="menu__href link js-goto">Вопросы и ответы</a>
 				</li>
 			
 			</ul> <!-- /.menu__list -->
@@ -66,7 +66,8 @@
 				@@if (server === "mosreg"){
 				href="https://school.mosreg.ru/subscriptions?utm_source=mosreg&utm_medium=landing1&utm_campaign=free1" 
 				}
-
+				
+				target="_blank"
 				class="home__button button button--blue button--m">Попробовать бесплатно</a>
 			
 			</div><!-- /.home__button-placeholder -->
@@ -98,35 +99,35 @@
 			
 			<li class="how__item how__item--1">
 				
-				Какие оценки
+				Какие оценки<br>
 				получил ребенок
 				
 			</li> <!-- /.how__item -->
 			
 			<li class="how__item how__item--2">
 				
-				Какие уроки
+				Какие уроки<br>
 				пропустил
 				
 			</li> <!-- /.how__item -->
 			
 			<li class="how__item how__item--3">
 				
-				Что задано
+				Что задано<br>
 				на&nbsp;дом
 				
 			</li> <!-- /.how__item -->
 			
 			<li class="how__item how__item--4">
 				
-				Какое расписание
+				Какое расписание<br>
 				завтра
 				
 			</li> <!-- /.how__item -->
 			
 			<li class="how__item how__item--5">
 				
-				Что нового
+				Что нового<br>
 				в&nbsp;школе
 				
 			</li> <!-- /.how__item -->
@@ -147,23 +148,25 @@
 			
 			<div class="screen__text screen__text--1 text">
 				<p>
-					Посмотрите пример
-					уведомления, которое Вы
+					Посмотрите пример<br>
+					уведомления, которое Вы<br>
 					будете получать
 				</p>
 			</div><!-- /.screen__text -->
 
 			<div class="screen__text screen__text--2 text">
 				<p>
-					Выбирайте типы
-					уведомлений,
+					Выбирайте типы<br>
+					уведомлений,<br>
 					которые будете получать
 				</p>
 			</div><!-- /.screen__text -->
 
 			<div class="screen__text screen__text--3 text">
 				<p>
-					Выбирайте, на какой срок Вы хотите подключить подписку
+					Выбирайте, на какой<br>
+					срок Вы хотите<br>
+					подключить подписку
 				</p>
 			</div><!-- /.screen__text -->
 
@@ -185,7 +188,19 @@
 
 		<div class="section__text subscribe__text text">
 			<p>
-				По окончании бесплатного пробного периода Вы можете подключить SMS подписку от 49 рублей в месяц, Email подписку — от 9 рублей в месяц. 
+				@@if (server === "dnevnik" || server === "local"){
+				
+				По окончании бесплатного пробного периода Вы можете подключить<br>
+				SMS подписку от <strong>49 рублей в месяц</strong>, Email подписку — от <strong>9 рублей в месяц</strong>. 
+
+				}
+
+				@@if (server === "mosreg"){
+				
+				По окончании бесплатного пробного периода Вы можете подключить<br>
+				SMS подписку от <strong>49 рублей в месяц</strong>. 
+
+				}
 			</p>
 		</div><!-- /.section__text subscribe__text -->
 
@@ -201,6 +216,7 @@
 			href="https://school.mosreg.ru/subscriptions?utm_source=mosreg&utm_medium=landing2&utm_campaign=free2" 
 			}
 
+			target="_blank"
 			class="subscribe__button button button--blue button--m">Попробовать бесплатно</a>
 		
 		</div><!-- /.home__button-placeholder -->
@@ -230,7 +246,15 @@
 				<div class="faq-item__text text">
 					<p>
 						Оплатить подписку можно двумя способами:<br>
+						
+						@@if (server === "dnevnik" || server === "local"){
 						— с помощью баллов Дневник.ру <br>
+						}
+
+						@@if (server === "mosreg"){
+						— с помощью баллов Школьного портала <br>
+						}
+						
 						(1 балл = 1 рубль);<br>
 						— банковской картой или электронным кошельком, если на Вашем счёте нет баллов.
 					</p>
@@ -260,15 +284,38 @@
 
 				<div class="faq-item__text text">
 					<p>
-						Вы можете в любое время отказаться от подписки, обратившись в службу поддержки: team@company.dnevnik.ru При этом все неиспользованные баллы будут возвращены на Ваш счёт.
+						Вы можете в любое время отказаться от подписки, обратившись в службу поддержки: 
+						
+						@@if (server === "dnevnik" || server === "local"){
+						<a href="mailto:team@company.dnevnik.ru">team@company.dnevnik.ru</a> 
+						}
+
+						@@if (server === "mosreg"){
+						<a href="mailto:support@school.mosreg.ru">support@school.mosreg.ru</a> 
+						}
+
+						При этом все неиспользованные баллы будут возвращены на Ваш счёт.
 					</p>
 				</div><!-- /.faq-item__text text -->
 				
 			</li> <!-- /.faq__item -->
 		
 		</ul> <!-- /.faq__list -->
+	
+	</div> <!-- /.faq__wrap -->
 
-		<div class="section__button-placeholder faq__button-placeholder">
+</section> <!-- /.faq -->
+
+
+<section class="container__section section questions" id="questions">
+	
+	<div class="section__wrap questions__wrap">
+
+		<h2 class="section__title questions__title">
+			Остались вопросы?
+		</h2>
+
+		<div class="section__button-placeholder questions__button-placeholder">
 					
 			<a 
 
@@ -279,11 +326,12 @@
 			@@if (server === "mosreg"){
 			href="https://helpschool.mosreg.ru/hc/ru?utm_source=mosreg&utm_medium=landing_subscriptions&utm_campaign=landing_subscriptions" 
 			}
-
+			
+			target="_blank"
 			class="faq__button button button--grey button--m">Обратиться в поддержку</a>
 		
 		</div><!-- /.home__button-placeholder -->
 	
-	</div> <!-- /.faq__wrap -->
+	</div> <!-- /.questions__wrap -->
 
-</section> <!-- /.faq -->
+</section> <!-- /.questions -->
